@@ -1,7 +1,14 @@
+
+;; 普通开关设置
+;; **********************************************************
 ;;设置UTF-8
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
+;; 显示行号
+;;(global-linum-mode t)
+(column-number-mode t)               ; 显示列号
+(show-paren-mode t)                  ; 显示括号匹配
 
 ;; key bindings
 (when (eq system-type 'darwin) ;; mac specific settings
@@ -15,9 +22,9 @@
 
 
 ;;  设置高亮
-(add-to-list 'load-path "~/.emacs.d/highlight-symbol")
-(require 'highlight-symbol)
-(global-set-key [(control f3)] 'highlight-symbol-at-point)
-(global-set-key [f3] 'highlight-symbol-next)
-(global-set-key [(shift f3)] 'highlight-symbol-prev)
-(global-set-key [(meta f3)] 'highlight-symbol-prev)))
+;;(add-to-list 'load-path "~/.emacs.d/highlight-symbol")
+;;(require 'highlight-symbol)
+;;(global-set-key [(control f3)] 'highlight-symbol-at-point)
+;;(global-set-key [f3] 'highlight-symbol-next)
+;;(global-set-key [(shift f3)] 'highlight-symbol-prev)
+;;(global-set-key [(meta f3)] 'highlight-symbol-prev)))
