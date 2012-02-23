@@ -4,4 +4,4 @@
 (require 'yasnippet) ;; not yasnippet-bundle
 (yas/global-mode 1)
 
-(provide 'init-yasnippet.el)
+(provide 'init-yasnippet)

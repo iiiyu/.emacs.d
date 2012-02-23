@@ -28,7 +28,7 @@
 (require 'init-ido)
 
 ;; 配置yasnippet
-;(require 'init-yasnippet)
+(require 'init-yasnippet)
 
 ;; emacs 配色
 (require 'init-color)
