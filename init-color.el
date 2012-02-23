@@ -1,8 +1,8 @@
 ;; -*- coding: utf-8 -*-
-(add-to-list 'load-path "~/.emacs.d/color-theme")
+(add-to-list 'load-path "~/.emacs.d/plugins/color-theme")
 (require 'color-theme)
 
-(add-to-list 'load-path "~/.emacs.d/color")
+(add-to-list 'load-path "~/.emacs.d/plugins/color")
 (require 'color-theme-solarized)
 
 (eval-after-load "color-theme"

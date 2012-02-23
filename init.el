@@ -33,4 +33,12 @@
 ;; emacs 配色
 (require 'init-color)
 
+;; cedet 配置
+(require 'init-cedet)
+
+;; ecb 配置
+(require 'init-ecb)
+
 (provide 'init)
+
+

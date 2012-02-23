@@ -1,5 +1,5 @@
 ;; -*- coding: utf-8 -*-
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/highlight-symbol"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/plugins/highlight-symbol"))
 (require 'highlight-symbol)
 
 (global-set-key [(control f3)] 'highlight-symbol-at-point)
