@@ -24,4 +24,7 @@
 ;; 自动补全配置
 (require 'init-auto-complete)
 
+;; 配置ido
+(require 'init-ido)
+
 (provide 'init)
