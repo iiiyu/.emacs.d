@@ -1,30 +1,27 @@
+;; -*- coding: utf-8 -*-
+(add-to-list 'load-path (expand-file-name "~/.emacs.d"))
 
-;; 普通开关设置
-;; **********************************************************
-;;设置UTF-8
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(prefer-coding-system 'utf-8)
-;; 显示行号
-;;(global-linum-mode t)
-(column-number-mode t)               ; 显示列号
-(show-paren-mode t)                  ; 显示括号匹配
-
-;; key bindings
-(when (eq system-type 'darwin) ;; mac specific settings
-  (setq mac-option-modifier 'alt)
-  (setq mac-command-modifier 'meta)
-  (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
-)
-
-;; fullscreen mode
-(global-set-key (kbd "M-RET") 'ns-toggle-fullscreen) 
+;;----------------------------------------------------------------------------
+;; Which functionality to enable (use t or nil for true and false)
+;;----------------------------------------------------------------------------
+(setq *spell-check-support-enabled* nil)
+(setq *macbook-pro-support-enabled* t)
+(setq *is-a-mac* (eq system-type 'darwin))
+(setq *is-carbon-emacs* (and *is-a-mac* (eq window-system 'mac)))
+(setq *is-cocoa-emacs* (and *is-a-mac* (eq window-system 'ns)))
 
 
-;;  设置高亮
-;;(add-to-list 'load-path "~/.emacs.d/highlight-symbol")
-;;(require 'highlight-symbol)
-;;(global-set-key [(control f3)] 'highlight-symbol-at-point)
-;;(global-set-key [f3] 'highlight-symbol-next)
-;;(global-set-key [(shift f3)] 'highlight-symbol-prev)
-;;(global-set-key [(meta f3)] 'highlight-symbol-prev)))
+;;----------------------------------------------------------------------------
+;; 加载详细配置文件
+;;----------------------------------------------------------------------------
+
+;; 加载通用配置文件
+(require 'init-custom)
+
+;; 加载高亮配置
+(require 'init-highlight-symbol)
+
+;; 自动补全配置
+(require 'init-auto-complete)
+
+(provide 'init)
