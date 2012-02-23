@@ -27,4 +27,7 @@
 ;; 配置ido
 (require 'init-ido)
 
+;; 配置yasnippet
+(require 'init-yasnippet)
+
 (provide 'init)
