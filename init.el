@@ -39,6 +39,10 @@
 ;; ecb 配置
 (require 'init-ecb)
 
+;; c c++ 配置
+(require 'init-cc-mode)
+
+
 (provide 'init)
 
 

@@ -25,20 +25,13 @@
 (setq frame-title-format "Yu @%b")
 
 ;; 窗口切换快捷键
-(global-set-key [M-left] 'windmove-left)
-(global-set-key [M-right] 'windmove-right)
-(global-set-key [M-up] 'windmove-up)
-(global-set-key [M-down] 'windmove-down)
+(global-set-key [S-left] 'windmove-left)
+(global-set-key [S-right] 'windmove-right)
+(global-set-key [S-up] 'windmove-up)
+(global-set-key [S-down] 'windmove-down)
 
-
-;;  设置高亮
-
-;;(global-set-key [(shift right)] 'shift-mark-forward-char)
-;;(add-to-list 'load-path "~/.emacs.d/highlight-symbol")
-;;(require 'highlight-symbol)
-;;(global-set-key [(control f3)] 'highlight-symbol-at-point)
-;;(global-set-key [f3] 'highlight-symbol-next)
-;;(global-set-key [(shift f3)] 'highlight-symbol-prev)
-;;(global-set-key [(meta f3)] 'highlight-symbol-prev)))
+;;复制到其他程序
+(global-set-key "\367" (quote clipboard-kill-ring-save))
 
 (provide 'init-custom)
+
