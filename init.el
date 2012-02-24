@@ -42,6 +42,9 @@
 ;; c c++ 配置
 (require 'init-cc-mode)
 
+;; python 配置
+(require 'init-python)
+
 
 (provide 'init)
 
@@ -51,6 +54,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(ecb-options-version "2.40")
  '(ecb-primary-secondary-mouse-buttons (quote mouse-1--mouse-2)))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
