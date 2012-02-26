@@ -278,7 +278,8 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (eshell-prompt ((t (,@fmt-bold ,@fg-green))))
              ;; font-lock
              (font-lock-builtin-face ((t (,@fg-green)))) ; Statement
-             (font-lock-comment-face ((t (,@fmt-ital ,@fg-base01)))) ; Comment
+             ;(font-lock-comment-face ((t (,@fmt-ital ,@fg-base01)))) ; Comment
+	     (font-lock-comment-face ((t (,@fg-base01)))) ; Comment
              (font-lock-constant-face ((t (,@fg-cyan)))) ; Constant
              (font-lock-function-name-face ((t (,@fg-blue)))) ; Identifier
              (font-lock-keyword-face ((t (,@fg-green)))) ; Statement

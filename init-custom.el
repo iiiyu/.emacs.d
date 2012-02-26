@@ -22,7 +22,13 @@
 (global-set-key (kbd "M-RET") 'ns-toggle-fullscreen) 
 
 ;; 设置窗口title
-(setq frame-title-format "Yu @%b")
+(setq my-hostname 
+      (replace-regexp-in-string "\\(^[[:space:]\n]*\\|[[:space:]\n]*$\\)" "" ;; like perl chomp()
+        (with-output-to-string 
+           (call-process "/bin/hostname" nil standard-output nil))))
+    (setq my-username (getenv "USERNAME"))
+    (setq frame-title-format '("%b - " my-username "@" my-hostname))
+;;(setq frame-title-format "Yu @%b")
 
 ;; 窗口切换快捷键
 (global-set-key [S-left] 'windmove-left)
