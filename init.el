@@ -45,6 +45,9 @@
 ;; python 配置
 (require 'init-python)
 
+;; tabbar 配置
+(require 'init-tabbar)
+
 
 (provide 'init)
 
